@@ -1,13 +1,11 @@
-import java.util.Date;
-
 public class Movie {
     String title;
-    Date release_date;
+    int release_date;
     Integer number;
-    Float cost;
-    Float revenue;
+    Long cost;
+    Long revenue;
 
-    public Movie(String title, Date release_date, Integer number, Float cost, Float revenue) {
+    public Movie(String title, int release_date, Integer number, Long cost, Long revenue) {
         this.title = title;
         this.release_date = release_date;
         this.number = number;
@@ -22,10 +20,10 @@ public class Movie {
     public void setTitle(String title) {
         this.title = title;
     }
-    public Date getRelease_date() {
+    public int getRelease_date() {
         return release_date;
     }
-    public void setRelease_date(Date release_date) {
+    public void setRelease_date(int release_date) {
         this.release_date = release_date;
     }
     public Integer getNumber() {
@@ -34,16 +32,16 @@ public class Movie {
     public void setNumber(Integer number) {
         this.number = number;
     }
-    public Float getCost() {
+    public Long getCost() {
         return cost;
     }
-    public void setCost(Float cost) {
+    public void setCost(Long cost) {
         this.cost = cost;
     }
-    public Float getRevenue() {
+    public Long getRevenue() {
         return revenue;
     }
-    public void setRevenue(Float revenue) {
+    public void setRevenue(Long revenue) {
         this.revenue = revenue;
     }
 
