@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 class StarWars {
@@ -44,10 +41,8 @@ class StarWars {
     public static Actor createActor(String firstname, String lastname, Character character1 , Character character2) {
 
         Actor newActor = new Actor(firstname, lastname);
-        newActor.addCharacters(new HashMap<Character, Character>() {{
-            put(character1, character2);
-        }}
-        );
+        newActor.addCharacters(character1);
+        newActor.addCharacters(character2);
         System.out.println("New Actor : " + newActor.toString());
         return newActor;
     }

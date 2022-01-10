@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 public class Actor {
     String lastname; 
     String firstname;
-    Collection<Map<Character,Character>> characters = new ArrayList<Map<Character,Character>>() ;
+    List<Character> characters = new ArrayList<Character>() ;
     
 
 
@@ -31,15 +32,15 @@ public class Actor {
     }
 
     
-    public Collection<Map<Character, Character>> getCharacters() {
+    public List<Character> getCharacters() {
         return characters;
     }
 
-    public void setCharacters(Collection<Map<Character, Character>> characters) {
+    public void setCharacters(List<Character> characters) {
         this.characters = characters;
     }
 
-    public void addCharacters(Map<Character, Character> characters) {
+    public void addCharacters(Character characters) {
         this.characters.add(characters);
     }
 
