@@ -30,14 +30,27 @@ public static void askUserToCreateFilm(Scanner scanner){
 
     System.out.println("Episode numero :");
     String number = scanner.nextLine();
-
+ 
     System.out.println("Cout :");
     String cost = scanner.nextLine();
 
     System.out.println("Recette :");
     String revenue = scanner.nextLine();
 
-    createFilm(title, Integer.parseInt(year), Integer.parseInt(number), Long.parseLong(cost), Long.parseLong(revenue));
+
+    try{
+     int int_year  = Integer.parseInt(year);
+     int int_number  = Integer.parseInt(number);
+     Long long_cost  = Long.parseLong(cost);
+     Long long_revenue  = Long.parseLong(revenue);
+     createFilm(title, int_year, int_number, long_cost, long_revenue);
+    }
+    catch(Exception e){
+        System.out.println("Erreur veuillez recommencer : " + e);
+        askUserToCreateFilm(scanner);
+    }
+    
+
 }
 
 
