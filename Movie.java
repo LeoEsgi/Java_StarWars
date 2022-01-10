@@ -1,9 +1,19 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Movie {
     String title;
     int release_date;
     Integer number;
     Long cost;
     Long revenue;
+    Collection<Actor> actors = new ArrayList<Actor>();
+
+    
+
+    public Movie() {
+    }
+
 
     public Movie(String title, int release_date, Integer number, Long cost, Long revenue) {
         this.title = title;
@@ -43,6 +53,17 @@ public class Movie {
     }
     public void setRevenue(Long revenue) {
         this.revenue = revenue;
+    }
+
+
+
+    public Collection<Actor> getActors() {
+        return actors;
+    }
+
+
+    public void setActors(Collection<Actor> actors) {
+        this.actors = actors;
     }
 
 
