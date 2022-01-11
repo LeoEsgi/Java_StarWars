@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 class StarWars {
@@ -87,6 +90,12 @@ class StarWars {
 
         return newMovie;
 
+    }
+
+    public static void makeBackUp(HashMap<Integer,Movie> movies){
+        for (Map.Entry<Integer, Movie> entry : movies.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue().getTitle() + " " + entry.getValue().calculBénéfice());
+        }
     }
 
 }
